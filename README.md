@@ -9,12 +9,12 @@ Experiment Environment
 
 Project Struct
 ------
-### datasets
-* YoochooseSubDataset file  ------ this file contains a relatively small subdataset of Yoochoose to run test the code and experiment results
-* data_preprocess.py        ------ this script is used to preprocess the origin data and split train dataset and test dataset
+### data
+* taobao_buy_8_time_4.txt  ------ the dataset of taobao buy, Each line is in format: UserID \t ItemID \t CategoryId \t Time. we don't use the category information, It's just for catering to some other datasets' format.
+* #### adj_matrix        
 ### program
 * main.py                   ------ this is the program entry
-* ReGNN.py                  ------ the ReGNN model
+* model_time_two_channel_gcn.py             ------ the ReGNN model
 * utils.py                  ------ some helper functions we used
 
 Recommended Setup
