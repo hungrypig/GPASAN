@@ -14,8 +14,8 @@ Project Struct
 
 * #### adj_matrix/taobao_buy_8 
 ------
-* s_norm_adj_mat.npz  ------ the preprocessed adjacent matrix of the item-item graph
-* taobao_buy_8.txt  ------ a temporary file
+ s_norm_adj_mat.npz  ------ the preprocessed adjacent matrix of the item-item graph
+ taobao_buy_8.txt  ------ a temporary file
 
 ### /
 * main.py                   ------ this is the program entry
