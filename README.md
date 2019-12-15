@@ -9,7 +9,7 @@ Experiment Environment
 
 Project Struct
 ------
-### data
+### GPASAN/data
 * taobao_buy_8_time_4.txt  ------ the dataset of taobao buy, Each line is in format: UserID \t ItemID \t CategoryId \t Time. we don't use the category information, It's just for catering to some other datasets' format.
 
 * #### adj_matrix/taobao_buy_8 
@@ -17,7 +17,7 @@ Project Struct
 * s_norm_adj_mat.npz  ------ the preprocessed adjacent matrix of the item-item graph
 * taobao_buy_8.txt  ------ a temporary file
 
-### /
+### GPASAN/
 * main.py                   ------ this is the program entry
 * model_time_two_channel_gcn.py             ------ the major PGASAN model
 * modules_time.py                  ------ the periodic-attenuated self-attention network module
