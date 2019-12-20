@@ -136,7 +136,7 @@ class Model():
         #  测试集的item——embedding和得分
         self.test_item = tf.placeholder(tf.int32, shape=args.candidate_count)
         test_item_emb = tf.nn.embedding_lookup(item_emb_table, self.test_item)
-        self.test_logits = tf.matmul(seq_emb, tf.transpose(test_item_emb))  # 二维， 【batchsize*maxlen， 101】
+        self.test_logits = tf.matmul(seq_emb, tf.transpose(test_item_emb))  # 二维，
         self.test_logits = tf.reshape(self.test_logits,
                                       [tf.shape(self.input_seq)[0], args.maxlen, args.candidate_count])
         self.test_logits = self.test_logits[:, -1, :]  # 取最后一个item的得分
