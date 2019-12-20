@@ -10,7 +10,7 @@ Experiment Environment
 Project Struct
 ------
 ### GPASAN/data
-* taobao_buy_8_time_4.txt  ------ the dataset of taobao buy, Each line is in format: UserID \t ItemID \t CategoryId \t Time. we don't use the category information, It's just for catering to some other datasets' format.
+* taobao_buy_8_time_4.zip  ------ the dataset of taobao buy, Each line is in format: UserID \t ItemID \t CategoryId \t Time. we don't use the category information, It's just for catering to some other datasets' format. Unzip the taobao_buy_8_time_4.zip in this directory before running the program.
 
 * #### adj_matrix/taobao_buy_8 
 ------
