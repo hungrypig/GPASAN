@@ -10,8 +10,6 @@ from model_time_two_channel_gcn import Model
 from sampler_time_repeat import WarpSampler
 from util_periodic_two_channel import *
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"
-
 
 def str2bool(s):
     if s not in {'False', 'True'}:
