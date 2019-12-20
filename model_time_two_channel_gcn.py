@@ -130,7 +130,7 @@ class Model():
         pos_emb = tf.nn.embedding_lookup(item_emb_table, pos)
         neg_emb = tf.nn.embedding_lookup(item_emb_table, neg)
         seq_emb = tf.reshape(self.seq,
-                             [tf.shape(self.input_seq)[0] * args.maxlen, args.hidden_units])  # 最后的session表示，需要优化, 二维
+                             [tf.shape(self.input_seq)[0] * args.maxlen, args.hidden_units])  #
         repeat_seq_emb = tf.reshape(self.repeat_seq, [tf.shape(self.input_seq)[0] * args.maxlen, args.hidden_units])
 
         #  测试集的item——embedding和得分
@@ -148,7 +148,7 @@ class Model():
         self.repeat_test_logits = self.repeat_test_logits[:, -1, :]
 
         # prediction layer
-        self.pos_logits = tf.reduce_sum(pos_emb * seq_emb, -1)  # 序列表示和正例embedding相乘得分，二维*二维，每个session中每个item对正例的评分
+        self.pos_logits = tf.reduce_sum(pos_emb * seq_emb, -1)  # 评分
         self.neg_logits = tf.reduce_sum(neg_emb * seq_emb, -1)
 
         self.repeat_pos_logits = tf.reduce_sum(pos_emb * repeat_seq_emb, -1)
